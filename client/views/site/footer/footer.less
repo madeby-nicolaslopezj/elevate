@@ -1,0 +1,95 @@
+@color: rgb(93, 93, 93);
+@background-color: rgb(49, 47, 47);
+
+.footer {
+	background-color: @background-color;
+	color: @color;
+	padding-top: 50px;
+
+	img.logo {
+		width: 78%;
+	}
+
+	@media (max-width: 767px) {
+		text-align: center;
+
+		img.logo {
+			width: 60%;
+		}
+	}
+
+	.site-map {
+		margin-top: 5px;
+		text-align: right;
+
+		div  {
+			margin-bottom: 10px;
+
+			a {
+				color: @color;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-left: 20px;
+
+				&:hover {
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+		
+		@media (max-width: 767px) {
+			margin-left: -15px;
+			margin-top: 25px;
+			margin-bottom: -20px;
+			text-align: center;
+		}
+	}
+
+
+	.social {
+		margin-top: 8px;
+		text-align: right;
+		@media (max-width: 767px) {
+			margin-top: 30px;
+			text-align: center;
+		}
+		div {
+			background-color: @color;
+			width: 30px;
+			height: 30px;
+			margin-left: 4px;
+			margin-right: 4px;
+			text-align: center;
+			border-radius: 50%;
+			font-size: 18px;
+			display: inline-block;
+			padding-top: 2px;
+
+			a {
+				color: @background-color;
+			}
+
+			&:hover {
+				background-color: white;
+			}
+		}
+	} 
+
+	.text {
+		img {
+			float: left;
+			height: 45px;
+		}
+
+		p {
+			position: relative;
+			top: 13px;
+			left: 5px;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+
+	}
+
+}

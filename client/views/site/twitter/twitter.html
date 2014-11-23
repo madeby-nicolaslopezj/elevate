@@ -1,0 +1,29 @@
+<template name="twitter">
+	<div class="twitter" style="background-image: url('{{ dict 'twitterBackgroundImage.link' 'http://trucko.cl/uploads/images/53ed41137852f.png' }}');">
+		<div class="twitter-divider">
+			<i class="fa fa-twitter"></i>	
+		</div>
+		<div id="carousel-twitter" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				{{# each tweets }}
+					<li data-target="#carousel-twitter" data-slide-to="{{ index }}" class="{{# if isCero index }}active{{/ if }}"></li>
+				{{/ each }}
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				{{# each tweets }}
+					<div class="item {{# if isCero index }}active{{/ if }} text-center row">
+						<div class="col-sm-6 col-sm-offset-3">
+							{{{ content }}}
+						</div>
+					</div>
+				{{/ each }}
+			</div>
+			<a class="left carousel-control" href="#carousel-twitter" role="button" data-slide="prev">
+				<span class="btn-left"><i class="fa fa-chevron-left"></i></span>
+			</a>
+			<a class="right carousel-control" href="#carousel-twitter" role="button" data-slide="next">
+				<span class="btn-right"><i class="fa fa-chevron-right"></i></span>
+			</a>
+		</div>
+	</div>
+</template>

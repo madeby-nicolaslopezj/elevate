@@ -1,7 +1,7 @@
 Template.nav.rendered = function () {
 	$('body').scrollspy({ target: '#nav-collapse' })
 
-	$("li.move a, #page-top a, .navbar-brand").click(function() {
+	$("li.move a, #page-top a, .navbar-brand, .site-map a").click(function() {
 		var id = $(this).attr('href');
 		
 		$('html, body').animate({
