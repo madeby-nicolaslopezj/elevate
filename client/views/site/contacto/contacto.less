@@ -1,0 +1,54 @@
+@color: rgb(205, 209, 34);
+@text-color: white;
+@header-color: black;
+@form-color: rgb(68, 69, 10);
+
+#contacto {
+	background-color: @color;
+	color: @text-color;
+
+	h2 {
+		color: @header-color;
+	}
+
+	hr.colored {
+		border-color: @text-color;
+	}
+
+	form {
+		color: @form-color;
+
+		.row:first-child .floating-label-form-group {
+			border-top: 1px solid @form-color;
+		}
+		.floating-label-form-group {
+			border-bottom: 1px solid @form-color;
+		}
+
+		input,
+		textarea {
+			&::-webkit-input-placeholder {
+    			color: lighten(@form-color, 20%);
+			}
+			&:-moz-placeholder {
+			    color: lighten(@form-color, 20%)r;
+			}
+			&::-moz-placeholder {
+			    color: lighten(@form-color, 20%);
+			}
+			&:-ms-input-placeholder {
+			    color: lighten(@form-color, 20%);
+			}
+		}
+	}
+}
+
+li.move.contacto {
+	&.active a,
+	&.active:hover,
+	&.active:focus,
+	a:hover,
+	a:focus {
+		color: @color !important;
+	}
+}

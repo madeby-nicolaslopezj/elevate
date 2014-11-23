@@ -1,0 +1,61 @@
+@expanded-color: rgb(98, 20, 79);
+
+.navbar {
+	text-transform: uppercase;
+	font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 700;
+
+	li.move {
+		&.active {
+			a,
+			a:hover,
+			a:focus {
+				background-color: inherit;
+			}
+		}
+	}
+
+	li.social {
+		a {
+			background-color: rgb(233, 1, 128);
+			border-radius: 50%;
+			margin-top: 8px;
+			color: #000;
+			width: 30px;
+			height: 30px;
+			margin-left: 6px;
+
+			&:hover,
+			&:focus {
+				background-color: white;
+				color: #000 !important;
+			}
+
+			&.facebook {
+				padding: 6px 10px;
+			}
+			&.instagram {
+				padding: 6px 8px;
+			}
+			&.twitter {
+				padding: 6px 8px;
+			}
+		}
+	}
+
+	&.navbar-expanded {
+		li.move a {
+			color: @expanded-color;
+		}
+
+		li.social a {
+			color: darken(@expanded-color, 20%);
+
+			&:hover,
+			&:focus {
+				background-color: @expanded-color !important;
+				color: white !important;
+			}
+		}
+	}
+}

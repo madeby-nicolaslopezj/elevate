@@ -1,0 +1,45 @@
+@color: rgb(230, 30, 141);
+@text-color: white;
+@header-color: black;
+
+#tickets {
+	background-color: @color;
+	color: @text-color;
+
+	h2 {
+		color: @header-color;
+	}
+
+	hr.colored {
+		border-color: @text-color;
+	}
+
+}
+
+.tickets-quote {
+	hr.colored {
+		border-color: @color;
+	}
+
+	.quote {
+		strong {
+			font-weight: 300;
+			color: @color;
+		}
+	}
+
+	.btn-outline-light:hover, 
+	.btn-outline-light:focus{
+		color: @color;
+	}
+}
+
+li.move.tickets {
+	&.active a,
+	&.active:hover,
+	&.active:focus,
+	a:hover,
+	a:focus {
+		color: @color !important;
+	}
+}

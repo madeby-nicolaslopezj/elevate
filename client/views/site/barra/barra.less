@@ -1,0 +1,26 @@
+@color: rgb(249, 170, 12);
+@text-color: white;
+@header-color: black;
+
+#barra {
+	background-color: @color;
+	color: @text-color;
+
+	h2 {
+		color: @header-color;
+	}
+
+	hr.colored {
+		border-color: @text-color;
+	}
+}
+
+li.move.barra {
+	&.active a,
+	&.active:hover,
+	&.active:focus,
+	a:hover,
+	a:focus {
+		color: @color !important;
+	}
+}
