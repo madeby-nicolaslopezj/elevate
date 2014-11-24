@@ -7,10 +7,10 @@ meteor-platform
 orionjs:admin
 orionjs:image-attribute
 less
-nicolaslopezj:contactform
 spiderable
 manuelschoebel:ms-seo
 email
 copleykj:livestamp
 markdown
 reactive-var
+aldeed:autoform

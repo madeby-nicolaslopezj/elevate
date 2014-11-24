@@ -1,6 +1,7 @@
 @color: rgb(249, 170, 12);
 @text-color: white;
 @header-color: black;
+@btn-bg-color: rgb(230, 30, 141);
 
 #barra {
 	background-color: @color;
@@ -15,6 +16,10 @@
 	}
 }
 
+.btn-full-width:hover {
+	background-color: @btn-bg-color !important;
+}
+
 li.move.barra {
 	&.active a,
 	&.active:hover,
@@ -23,4 +28,32 @@ li.move.barra {
 	a:focus {
 		color: @color !important;
 	}
+}
+
+#barra:before {
+	background: linear-gradient(-45deg, @color 16px, transparent 0), linear-gradient(45deg, @color 16px, transparent 0);
+    background-position: left-bottom;
+    background-repeat: repeat-x;
+    background-size: 32px 32px;
+    content: " ";
+    display: block;
+    position: relative;
+    top: -130px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
+}
+
+#barra:after {
+	background: linear-gradient(135deg, @color 16px, transparent 0), linear-gradient(-135deg, @color 16px, transparent 0);
+    background-position: left-bottom;
+    background-repeat: repeat-x;
+    background-size: 32px 32px;
+    content: " ";
+    display: block;
+    position: relative;
+    bottom: -125px;
+    left: 0px;
+    width: 100%;
+    height: 32px;
 }

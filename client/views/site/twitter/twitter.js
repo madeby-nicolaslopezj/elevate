@@ -13,7 +13,7 @@ Template.twitter.helpers({
 });
 
 Template.twitter.rendered = function () {
-	var tf = new TweetFetcher('499803529238683652');
+	var tf = new TweetFetcher('521862817826103296');
 	console.log('fetching tweets');
     tf.fetch(function(tweets)
     {
