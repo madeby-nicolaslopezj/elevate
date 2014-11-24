@@ -5,3 +5,7 @@ AutoForm.hooks({
 		}
 	}
 });
+
+Template.contacto.rendered = function () {
+	$("textarea[name=message]").val("");
+};
