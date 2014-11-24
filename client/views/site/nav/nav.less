@@ -5,7 +5,13 @@
 	font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 700;
 
+	.navbar-right {
+		margin-right: 0;
+	}
+
 	li.move {
+		font-size: 15px;
+
 		&.active {
 			a,
 			a:hover,
@@ -43,6 +49,21 @@
 		}
 	}
 
+	.logo-light {
+		display: none;
+	}
+
+	.logo-dark {
+		display: block;
+	}
+
+	@media (max-width: 768px) {
+		.logo-dark {
+			margin-top: 4%;
+			max-height: 90%;
+		}
+	}
+
 	&.navbar-expanded {
 		li.move a {
 			color: @expanded-color;
@@ -55,6 +76,24 @@
 			&:focus {
 				background-color: @expanded-color !important;
 				color: white !important;
+			}
+		}
+
+		.logo-light {
+			display: block;
+		}
+
+		.logo-dark {
+			display: none;
+		}
+
+		@media (max-width: 768px) {
+			.logo-light {
+				display: none;
+			}
+
+			.logo-dark {
+				display: block;
 			}
 		}
 	}

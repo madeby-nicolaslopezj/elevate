@@ -1,4 +1,4 @@
-@color: rgb(205, 209, 34);
+@color: rgb(249, 170, 12);
 @text-color: white;
 @header-color: black;
 @form-color: rgb(68, 69, 10);
@@ -28,16 +28,16 @@
 		input,
 		textarea {
 			&::-webkit-input-placeholder {
-    			color: lighten(@form-color, 20%);
+    			color: @form-color;
 			}
 			&:-moz-placeholder {
-			    color: lighten(@form-color, 20%)r;
+			    color: @form-color;
 			}
 			&::-moz-placeholder {
-			    color: lighten(@form-color, 20%);
+			    color: @form-color;
 			}
 			&:-ms-input-placeholder {
-			    color: lighten(@form-color, 20%);
+			    color: @form-color;
 			}
 		}
 	}
@@ -81,13 +81,10 @@ li.move.contacto {
     content: " ";
     display: block;
     position: relative;
-    top: -130px;
+    top: -92px;
     left: 0px;
     width: 100%;
     height: 32px;
-    @media (max-width: 767px) {
-        top: -105px;
-    }
 }
 
 #contacto:after {
@@ -98,11 +95,8 @@ li.move.contacto {
     content: " ";
     display: block;
     position: relative;
-    bottom: -125px;
+    bottom: -92px;
     left: 0px;
     width: 100%;
     height: 32px;
-    @media (max-width: 767px) {
-        bottom: -105px;
-    }
 }
